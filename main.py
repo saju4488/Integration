@@ -2,11 +2,11 @@ from unittest import result
 from turtle import title, width
 from tkinter import messagebox
 from tkinter import *
-reading_file = open('idioms.txt', 'r')
+reading_file = open('idioms01.txt', 'r')
 
 
 def data_open():
-    with open("idioms.txt", "r") as file:
+    with open("idioms01.txt", "r") as file:
         data = file.read()
     result_label.config(text=data)
 
@@ -27,7 +27,7 @@ def data_save():
 
 def data_find():
     word = idiom_entry.get()
-    with open("idioms.txt", "r") as file:
+    with open("idioms01.txt", "r") as file:
         for data in file:
             if word in data:
                 result_label.config(text=data)
