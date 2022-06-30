@@ -19,7 +19,7 @@ Canvas.create_text(340, 30, text="소원을 말해봐", fill="brown",
                    font=("나눔바른펜", 30, "bold"))
 
 img_list = []
-for i in range(55):
+for i in range(63):
     img = PhotoImage(file=f"images/img{i}.png")
     img_list.append(img)
 
