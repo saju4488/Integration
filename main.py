@@ -2,11 +2,11 @@ from unittest import result
 from turtle import title, width
 from tkinter import messagebox
 from tkinter import *
-reading_file = open('idioms04.txt', 'r')
+reading_file = open('idioms06.txt', 'r')
 
 
 def data_open():
-    with open("idioms04.txt", "r") as file:
+    with open("idioms06.txt", "r") as file:
         data = file.read()
     result_label.config(text=data)
 
@@ -18,7 +18,7 @@ def data_save():
     if len(idiom) == 0 or len(meaning) == 0:
         messagebox.showinfo(title="저장실패", message="자미두수 용어와 뜻을 모두 입력하세요")
     else:
-        with open("idioms04.txt", "a") as file:
+        with open("idioms06.txt", "a") as file:
             file.write(f"{idiom} : {meaning}\n")
         result_label.config(text=f"저장완료\n{idiom} : {meaning}")
         idiom_entry.delete(0, END)
@@ -27,7 +27,7 @@ def data_save():
 
 def data_find():
     word = idiom_entry.get()
-    with open("idioms04.txt", "r") as file:
+    with open("idioms06.txt", "r") as file:
         for data in file:
             if word in data:
                 result_label.config(text=data)
